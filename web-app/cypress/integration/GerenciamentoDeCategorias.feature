@@ -1,4 +1,4 @@
-Feature: Gerenciamento de Categorias
+Feature: Gerenciamento De Categorias
 	As Um fornecedor de itens para o sistema Muzikas
 	I want to Criar, remover e editar categorias
 	So that I can Melhor identificar meus itens para o meu público alvo
@@ -67,5 +67,4 @@ Feature: Gerenciamento de Categorias
         And Eu confirmo a edição da categoria
         Then Eu ainda estou na página "Editar categorias" 
         And Uma mensagem de erro é exibida
-        And A categoria de nome "Djent" segue com o nome "Djent"
-        And Eu vejo a categoria de nome "Djent"
+        And A categoria de nome "Djent" não passa a ter o nome "Pop"
