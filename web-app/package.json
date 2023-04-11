@@ -54,6 +54,8 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
-    "stepDefinitions": "cypress/integration/GerenciamentoDeCategorias/Categoria.js"
+    "nonGlobalStepBaseDir": "cypress/integration",
+    "stepDefinitions": "cypress/integration/",
+    "integrationFolder": "cypress/integration"
   }
 }
