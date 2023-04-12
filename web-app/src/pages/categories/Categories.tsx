@@ -167,7 +167,7 @@ export const Categories = () => {
             <div className="categories-left-header">
               <div className="categories-left-header-first-line">
                 <h2>Categorias</h2>
-                <button onClick={isSelected}>
+                <button id="createPage" onClick={isSelected}>
                   <img src={plus} />
                 </button>
               </div>
@@ -179,7 +179,7 @@ export const Categories = () => {
                 <img src={magnifyingGlass} />
               </button>
             </div>
-            <div className="categories">
+            <div id="categories" className="categories">
               {search
                 ? categories
                     .filter((cat) => cat.name.includes(search))

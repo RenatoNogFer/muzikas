@@ -22,6 +22,7 @@ export const CreateCategories = ({ createHandler }: any) => {
         <div className="createCategories-input">
           <h4 className="createCategories-align-left">Nome da categoria</h4>
           <input
+            id="catNome"
             type="text"
             onChange={(e) => inputChangeHandler("name", e.target.value)}
             value={formData.name}
@@ -32,13 +33,14 @@ export const CreateCategories = ({ createHandler }: any) => {
             Descrição da categoria
           </h4>
           <textarea
+            id="catDesc"
             placeholder="Digite aqui sua descrição"
             onChange={(e) => inputChangeHandler("description", e.target.value)}
             value={formData.description}
           />
         </div>
         <div className="createCategories-button">
-          <button onClick={() => createHandler(formData)} type="button">
+          <button id="buttonCreate" onClick={() => createHandler(formData)} type="button">
             Cadastrar
           </button>
         </div>

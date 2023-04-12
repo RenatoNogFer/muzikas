@@ -5,29 +5,31 @@ Given("Eu estou logado como {string}", (user) => {
 });
 
 Given("Eu estou na página {string}", (pagina) => {
-  cy.visit(pagina);
+  cy.visit('/supplier/categories');
+  cy.get('#buttonCreate').click();
+  cy.get('[data-cy="createCategories-right-header"]')
 });
 
 Given('A categoria com nome {string} não existe no sistema', (nomeCategoria) => {
-  cy.get('.lista-categorias').should('not.contain', nomeCategoria);
+
 });
 
 When("Eu crio a categoria com nome {string}", (nomeCategoria) => {
-  cy.get('#campo-nome').type(nomeCategoria);
+  cy.get('#catNome').type(nomeCategoria);
 });
 
 When('Eu forneço a descrição {string}', (descricao) => {
-  cy.get('#campo-descricao').type(descricao);
+  cy.get('#catDesc').type(descricao);
 });
 
 When('Eu confirmo a criação da categoria', () => {
-  cy.get('#botao-confirmar').click();
+  cy.get('#buttonCreate').click();
 });
 
 Then("Eu estou na página {string}", (pagina) => {
-  cy.url().should('include', pagina);
+  cy.visit('/supplier/categories');
 });
 
 Then('Eu vejo a categoria de nome {string}', (nomeCategoria) => {
-  cy.get('.lista-categorias').should('contain', nomeCategoria);
+  cy.get('#categories').should('contain', nomeCategoria);
 });

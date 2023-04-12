@@ -17,6 +17,7 @@ import Promotions from './pages/promotions/Promotions'
 import Search from './pages/Search'
 import { Products } from './pages/products/Products'
 import { MainSupplier } from './pages/main_fornecedores/MainSupplier';
+import { CategoriesEditPage } from './pages/categories/categoriesEditPage'
 
 
 function App() {
@@ -33,12 +34,8 @@ function App() {
         <Route path="/supplier/login" element={<LoginSuppliers />} />
         <Route path="/supplier/register" element={<RegisterSupplier />} />
         <Route path="/supplier/promotions" element={<Promotions />} />
-        <Route
-          path="/supplier/categories"
-          element={
-            <Categories />
-          }
-        />
+        <Route path="/supplier/categories" element={<Categories /> } />
+        <Route path="/supplier/categories/edit" element={<CategoriesEditPage /> } />
       </Routes>
     </AuthProvider>
   );
